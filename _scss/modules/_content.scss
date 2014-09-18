@@ -1,0 +1,31 @@
+.header,
+.footer,
+nav,
+main{
+    width: 90%;
+    margin: 0 auto;
+    @media screen and (min-width: $xs){
+        width: 70%;
+    }
+    @media screen and (min-width: $md){
+        width: 60%;
+    }
+}
+main{
+    > article{
+        margin: auto auto 6em;
+        > img,
+        > figure{
+            max-width: 100%;
+        }
+
+        .time{
+            color: #999;
+            margin: 0;
+        }
+        h2{
+            margin-top: 0; 
+        }
+    }
+}
+

@@ -1,0 +1,26 @@
+---
+author: Florenz
+comments: true
+date: 2012-11-18 22:32:33+00:00
+layout: post
+slug: wp-svbtle
+title: wp-svbtle
+wordpress_id: 2335
+categories:
+- Links
+tags:
+- Link
+- Theme
+- Wordpress
+---
+
+Wahrscheinlich schon aufgefallen, aber ich schreibe es nochmal - am Wochenende habe ich mein bisheriges Wordpress Theme durch WP-SVBTLE ausgetauscht. Warum? Zum einen habe ich einige Dinge im Original Theme geändert, mit denen ich im Nachhinein doch nicht einverstanden war - zum anderen ist WP SVBTLE wirklich großartig. 
+
+
+
+
+
+In nächster Zeit werde ich wohl noch einige Anpassungen vornehmen und personalisieren. Aber bislang bin ich sehr glücklich - vorallem der minimale Markdown Backend Editor hat es mir angetan. Wer also wie ich sein eigenes Theme verhunzen sollte, kann ruhig [Svbtle](https://github.com/gravityonmars/wp-svbtle) ausprobieren. 
+
+
+

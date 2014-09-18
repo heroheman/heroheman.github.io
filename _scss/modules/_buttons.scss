@@ -1,0 +1,145 @@
+// Button Module - Placeholder
+// extend your button class with @extend %btn or %btn-group
+
+// Example: .button{ @extend %btn; }
+//          .button-group{ @extend %btn-group; }
+
+// %btn{
+//     @include font-size(1.0);
+//     // box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4), 0 5px 5px rgba(0, 0, 0, .2);
+//     background: transparent;
+//     border: 1px solid $white;
+//     color: $btn-text;
+//     display: inline-block;
+//     font-family: $font-button;
+//     line-height: 1;
+//     padding: $space $space-half;
+//     position: inline-block;
+//     text-decoration: none;
+//     // &:hover,
+//     // &:active,
+//     // &:visited{
+//     //     text-decoration: none;
+//     // }
+//     // &:hover{
+//     //     background: darken($btn-primary, 20%);
+//     // }
+
+//     // &.tiny   { padding: 5px 5px;    @include font-size(0.8); }
+//     // &.small  { padding: 7px 10px;   @include font-size(0.9); }
+//     // &.medium { padding: 10px 15px;  @include font-size(1.0); }
+//     // &.big    { padding: 15px 30px;  @include font-size(1.2); }
+
+//     // &.primary    { background: $btn-primary; @include hoverActiveFocus(background, darken($btn-primary, 5%));}
+//     // &.secondary  { background: $btn-second;  @include hoverActiveFocus(background, darken($btn-second, 5%));}
+//     // &.success    { background: $btn-success; @include hoverActiveFocus(background, darken($btn-success, 5%));}
+//     // &.alert      { background: $btn-alert;   @include hoverActiveFocus(background, darken($btn-alert, 5%));}
+
+//     // &.square    {  }
+//     // &.radius    { @extend %is-round; }
+//     // &.pill     { border-radius: 1000px; }
+// }
+
+// %btn-group{
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+//     display: inline-block;
+//     > li{
+//         float: left;
+//         margin: 0 0 0 -1px;
+//         &:first-child{
+//             margin-left: 0;
+//         }
+//     }
+//     &.radius{
+//         >li{
+//             &:first-child a{
+//                 border-bottom-left-radius: $border-radius +px;
+//                 border-top-left-radius: $border-radius +px; }
+
+//             &:last-child a{
+//                 border-bottom-right-radius: $border-radius +px;
+//                 border-top-right-radius: $border-radius +px; }
+//         }
+//     }
+// }
+
+.btn{
+    background: transparent;
+    position: relative;
+    border: 1px solid $white;
+    color: $btn-text;
+    display: inline-block;
+    font-family: $font-button;
+    line-height: 1;
+    padding: 0.7em 1em;
+    text-decoration: none;
+    z-index: 1;
+    &:before{
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        width: 100%;
+        background: white;
+        height: 0;
+        z-index: -1;
+        transition: all 0.1s linear;
+    }
+    &:hover{
+        text-decoration: none;
+        color: black;
+        &:before{
+            height: 100%;
+        }
+    }
+}
+
+.btn--small{
+    @extend .btn;
+    padding: 0.2em;
+}
+
+.btn--dark{
+    @extend .btn;
+    color: black;
+    border-color: black;
+    &:before{
+        background: $black;
+    }
+    &:hover{
+        color: white;
+    }
+}
+
+// Tab Buttons in the Footer
+.btn--footer{
+    @extend .btn--small;
+    @include font-size(1.2);
+    @include default-animation;
+    border: none;
+    display: inline-block;
+    &:hover, &.active{
+        // @include font-size(1.4);
+
+    }
+    &:before{ background: $prim6; }
+}
+
+
+// Header Play Button, use with icon
+.btn-play{
+    color: white;
+    @include font-size(4);
+    position: relative;
+    margin: 0 auto;
+    vertical-align: -webkit-baseline-middle;
+    @include default-animation;
+    &:hover{
+        text-decoration: none;
+        text-shadow: #f2f2f2 0 0 5px;
+    }
+}
+
+

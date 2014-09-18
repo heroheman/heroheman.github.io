@@ -1,0 +1,54 @@
+/* Typography */
+
+h1,.alpha,
+h2,.beta,
+h3,.gamma,
+h4,.delta,
+h5,.epsilon,
+h6,.zeta{
+    font-family: $font-heading;
+    color: $head-color;
+    font-weight: $font-heading-weight;
+}
+
+
+h1,.alpha{
+    @include font-size($font-size-h1);
+    line-height: 1em;}
+h2,.beta{
+    @include font-size($font-size-h2);
+    line-height: 1.2em;}
+h3,.gamma{
+    @include font-size($font-size-h3);
+    line-height: 1.3em;}
+h4,.delta{
+    @include font-size($font-size-h4);}
+h5,.epsilon{
+    @include font-size($font-size-h5);}
+h6,.zeta{
+    @include font-size($font-size-h5);}
+
+
+// Paragraphs
+p, pre, blockquote{
+    @include font-size(1.8);
+    @extend %font-main;
+    line-height: 3rem;
+    letter-spacing: 0.01em;
+    margin: 1em 0 2em;
+}
+
+pre{
+@include font-size(1.7);
+}
+
+.subheadline{ font-weight: bold; }
+
+// standardize any monospaced elements
+pre, code, kbd, samp { font-family: $font-mono; }
+
+// Font Helper Classes
+%font-main{
+    font-family: $font-main;}
+%font-heading{
+    font-family: $font-heading;}

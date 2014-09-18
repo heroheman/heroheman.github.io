@@ -1,0 +1,49 @@
+---
+author: Florenz
+comments: true
+date: 2011-01-18 13:21:51+00:00
+layout: post
+slug: html5-logo
+title: HTML5 Logo
+wordpress_id: 1686
+categories:
+- Blog
+- Frontend
+tags:
+- H.264
+- HTML5
+- Logo
+- South Park
+- W3C
+- WHAT WG
+---
+
+[![]({{ site.baseurl }}/images/2011/01/Bildschirmfoto-2011-01-18-um-14.04.08-580x387.png)]({{ site.baseurl }}/images/2011/01/Bildschirmfoto-2011-01-18-um-14.04.08.png)
+
+
+
+
+
+Das hier ist das ([noch nicht](http://www.w3.org/html/logo/faq.html#official)) offizielle [HTML5 Logo der W3C](http://www.w3.org/html/logo/). Erinnert mich an irgendwas. Vielleicht der Supercomputer der [Super Best Friends](http://www.youtube.com/watch?v=sSwG6MfiSqw)?
+
+
+
+
+
+> It stands strong and true, resilient and universal as the markup you write. It shines as bright and as bold as the forward-thinking, dedicated web developers you are. It's the standard's standard, a pennant for progress. And it certainly doesn't use tables for layout.
+
+
+
+
+
+Und - moment - gehört CSS3 jetzt offiziell zu HTML5 (siehe nächstes Bild)?
+[![]({{ site.baseurl }}/images/2011/01/Bildschirmfoto-2011-01-18-um-14.17.59-580x144.png)]({{ site.baseurl }}/images/2011/01/Bildschirmfoto-2011-01-18-um-14.17.59.png)
+
+
+
+
+
+Wie auch immer: Jetzt kann die W3C sagen, dass sie auch was zu HTML5 beigetragen haben und nicht alles von der WHAT WG vorgelesen bekommen. Und die Webentwickler haben jetzt einen neuen Button zum einfügen. Sieht auch viel besser aus als der alte. Und da HTML5 jetzt Superman darstellt - dürfte H.264 dass Kryptonit sein, dass es schwächt.
+
+
+

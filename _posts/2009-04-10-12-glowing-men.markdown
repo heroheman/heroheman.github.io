@@ -1,0 +1,21 @@
+---
+author: Florenz
+comments: true
+date: 2009-04-10 14:03:20+00:00
+layout: post
+slug: 12-glowing-men
+title: 12 Glowing Men
+wordpress_id: 471
+categories:
+- Blog
+tags:
+- Film
+- glowing
+- Video
+---
+
+[caption id="attachment_473" align="alignnone" width="550" caption="12 glowing men"][![12 glowing men]({{ site.baseurl }}/images/2009/04/glow-550x462.png)](http://www.12glowingmen.com)[/caption]
+
+Martijn Hendriks hat eine Szene aus "Die 12 Geschworenen" (12 Angry Men) ins Netz gestellt. Und das tolle: Sie Glüht!
+
+[Untitled (12 Glowing Men) by Martijn Hendriks, 2008](http://www.12glowingmen.com/).

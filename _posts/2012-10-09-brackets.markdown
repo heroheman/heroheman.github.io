@@ -1,0 +1,39 @@
+---
+author: Florenz
+comments: true
+date: 2012-10-09 17:53:36+00:00
+layout: post
+slug: brackets
+title: Brackets
+wordpress_id: 2125
+categories:
+- Links
+tags:
+- Adobe
+- brackets
+- Editor
+- webdev
+---
+
+> 
+  
+> 
+> Brackets is an open-source editor for web design and development built on top of web technologies such as HTML, CSS and JavaScript.
+> 
+> 
+
+
+
+
+
+
+Adobes Brackets ist ein Webeditor, dessen Philosophie Sinn macht. Ein Webeditor, der mithilfe von Webtechnologien gebaut ist.
+
+
+
+
+
+Man darf gespannt sein, wie Brackets sich entwickelt. Gut sieht er schonmal aus.
+
+
+

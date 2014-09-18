@@ -1,0 +1,30 @@
+---
+author: Florenz
+comments: true
+date: 2012-11-01 21:29:27+00:00
+layout: post
+slug: emmet
+title: Emmet
+wordpress_id: 2155
+categories:
+- Links
+tags:
+- Editor
+- plugin
+- Sublime Text
+- Workflow
+---
+
+> Emmet takes the snippets idea to a whole new level: you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abbreviation. Emmet is developed and optimised for web-developers whose workflow depends on HTML/XML and CSS, but can be used with programming languages too.
+
+
+
+
+
+
+
+
+Wer ZenCoding nicht kennt, nutzt oder nicht mag sollte Emmet eine Chance geben. Sieht gut aus.
+
+
+

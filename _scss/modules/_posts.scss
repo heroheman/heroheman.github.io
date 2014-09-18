@@ -1,0 +1,46 @@
+.post__headimage{
+    img{
+        width: 100%; 
+    }
+}
+.post__headline--bright{
+    color: black;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    @media screen and (min-width: $sm){
+        color: white;
+        // bottom: 10em;
+        position: absolute;
+        width: 80%; 
+        top: 0; bottom: 0;
+        right: 0; left: 0;
+        margin: auto;
+    }
+}
+.post__header{
+    position: relative;;
+}
+
+article{
+    h2{
+        a{
+            color: black;
+            text-decoration: none;
+            &:hover{
+                text-decoration: none; 
+            }
+        }
+    }
+    img{
+        max-width: 100%; 
+    }
+}
+
+blockquote{
+    padding-left: 1em;
+    border-left: 1px solid black;
+    p{
+         
+    }
+}

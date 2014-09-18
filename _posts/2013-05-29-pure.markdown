@@ -1,0 +1,34 @@
+---
+author: Florenz
+comments: true
+date: 2013-05-29 19:42:01+00:00
+layout: post
+slug: pure
+title: Pure
+wordpress_id: 2619
+categories:
+- Links
+---
+
+> 
+  
+> 
+> Pure is ridiculously tiny. The entire set of modules clocks in at 5.7KB minified and gzipped, without forgoing responsive styles, design, or ease of use. Crafted with mobile devices in mind, it was important to us to keep our file sizes small, and every line of CSS was carefully considered. If you decide to only use a subset of these modules, you'll save even more bytes.
+> 
+> 
+
+
+
+
+
+
+[Pure](http://purecss.io/) ist eine CSS Sammlung von Yahoo und tritt damit in eine Reihe mit Twitter Bootstrap und Zurb Foundation. Der Hauptaugenmerk liegt in hier auf der kleinen Detailgröße. Kann man im Auge behalten, für mich persönlich aber _noch_ nichts was ich in meiner täglichen Routine nutzen könnte.
+
+
+
+
+
+[Pure.css auf Github](https://github.com/yui/pure/)
+
+
+

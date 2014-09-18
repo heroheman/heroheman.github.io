@@ -1,0 +1,61 @@
+---
+author: Florenz
+comments: true
+date: 2011-01-21 12:23:21+00:00
+layout: post
+slug: sass-css
+title: Sass CSS
+wordpress_id: 1691
+categories:
+- Blog
+- Frontend
+- Tutorial
+tags:
+- CSS
+- Less
+- Ruby
+- Sass
+- Terminal
+---
+
+[![]({{ site.baseurl }}/images/2011/01/sass-lang.com-screen-capture-2011-1-21-13-13-43.png)](http://www.sass-lang.com)Das Erstellen von Stylesheets ist einfach und schnell erlernt. Doch ab und an wünscht man sich etwas mehr Dynamik. Sei es Werte in Variablen zu schreiben, um schnell Anpassungen vornehmen zu können oder das Verschachteln von Klassen, ist es doch sehr anstrengend immer wieder die gleiche Klasse für verschiedene Inhalte anzusprechen, ganz zu schweigen von der fehlenden Übersichtlichkeit (also, dass ist jedenfalls bei mir so).
+
+
+
+
+
+Dafür gibt es Abhilfe: [Sass CSS](http://www.sass-lang.com). Basierend auf Ruby ist diese CSS Erweiterung schon länger existent, doch ist es _leider_ bisher an mir unbeachtet vorbeigezogen. Schade, denn Sass macht einiges einfacher. Werte können in Variablen gespeichert werden, Klassen in Unterklassen organisiert usw.
+Auch das schreiben von simplen Funktionen ist möglich. Die [Sass Webseite](http://www.sass-lang.com) bietet hier eine ausreichende Dokumentation, einfach verständlich und mit Beispielen, so mag ich das.
+
+
+
+
+
+Das Sass CSS (oder SCSS) wird über das Terminal in valides, übersichtliches und sauberes CSS formatiert. Wenn also der User Änderungen an der Sass Datei vornimmt, wird automatisch der Code erstellt.
+
+
+
+
+
+Installation ist denkbar einfach. OSX User können Sass direkt mit der Terminaleingabe `gem install haml `installieren. Windows und Linuxuser müssen vorher noch Ruby installieren (Über Installer bzw. dem Paketmanager).
+
+
+
+
+
+Plugins für verschiedene Editoren sind auch [massig vorhanden](http://http://sass-lang.com/editors.html).
+
+
+
+
+
+Ich beschäftige mich allerdings erst seit ca. 2 Stunden mit Sass und bin bislang begeistert. Vielleicht liest hier ja jemand mit, der mehr Erfahrung mit Sass hat. Wer besondere Erfahrung mit dem produktiven Arbeitseinsatz hat, ... wäre nett wenn ich einen Kommentar von euch kriege.
+
+
+
+
+
+_Btw. eigentlich wollte ich über LessCSS schreiben, welches zumindest bis gestern noch ziemlich ähnlich zu Sass funktioniert hat, und für OSX Nutzer noch mit eigener APP kommt (womit man sich das Terminal hätte sparen können), aber seit heute scheint das ganze Projekt auf Javascript umgestellt worden zu sein. Bislang also nicht mein Ding, aber ich werde es mir bei Gelegenheit nochmal anschauen._
+
+
+

@@ -1,0 +1,120 @@
+// Use these for salvattore.js
+// #posts[data-columns]{
+//     &:before{
+//         content: '3 .column.size-1of3';
+//     }
+// }
+
+// These are the classes that are going to be applied:
+// .column { float: left; }
+// .size-1of3 { width: 33.333%; }
+
+// [data-columns]::before { display: none; }
+
+// $teaser-width: 380px;
+
+.teaser {
+    position: relative;
+    // width: $teaser-width;
+    height: auto;
+    margin-bottom: 1.5em;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    @extend %vichy-border;
+    @media screen and (min-width: $screen-sm-min) {
+        min-height: 620px;
+        max-height: 700px;
+    }
+}
+
+.teaser__img, .teaser__thumb {
+    width: 100%;
+}
+
+.teaser__desc {}
+
+.teaser__hl, .teaser__headline {
+    color: $prim2;
+}
+
+.teaser__meta {
+    position: relative;
+    a{
+        color: $prim3;
+        font-weight: normal;
+    }
+    .category{
+        text-transform: uppercase;
+        > a {
+            color: $prim1;
+        }
+    }
+    time{
+        color: $prim2;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        float: right;
+        > li {
+            list-style: none;
+            display: inline-block;
+            *display: inline;
+            zoom: 1;
+        }
+    }
+    @media screen and (min-width: $screen-xs-min) {
+        &:last-child{
+            bottom: 0;
+        }
+    }
+}
+
+.teaser--medium {
+    @extend .teaser;
+    // max-width: $teaser-width * 2;
+    width: 100%;
+
+}
+
+.teaser--large {
+    @media screen and (min-width: $screen-sm-min) {
+        .teaser__desc {
+            background: white;
+            opacity: 0.8;
+            width: 40%;
+            height: auto;
+            padding: 1em;
+            position: absolute;
+            top: auto;
+            left: auto;
+            bottom: 1em;
+            right: 1em;
+        }
+    }
+}
+
+
+.feature{
+    position: relative;
+    margin: 1em auto;
+}
+.feature__img {
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.feature--large{
+    @extend .feature;
+    position: relative;
+    height: 500px;
+    padding: 1em 0;
+}
+
+
+.filter{
+    margin: 1em 0;
+    @extend %vichy-border;
+}
+

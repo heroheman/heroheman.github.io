@@ -1,0 +1,22 @@
+---
+author: Florenz
+comments: true
+date: 2009-07-25 14:27:31+00:00
+layout: post
+slug: xkcd-com
+title: XKCD.com
+wordpress_id: 932
+categories:
+- Blog
+---
+
+[caption id="" align="alignnone" width="297" caption="Estimation"][![Estimation](http://imgs.xkcd.com/comics/estimation.png)](http://xkcd.com/612/)[/caption]
+XKCD.com ist ein DailyComic Blog und "about romance, sarcasm, math, and language". Einmal angefangen, kann man eigentlich nicht mehr warten den nächsten zu klicken - "Einer geht noch". Die Themen sind wirklich sehr vielschichtig, manche sind blöde, klar, aber dann kommt sowas:
+[caption id="" align="alignnone" width="376" caption="Sheeple"][![Sheeple](http://imgs.xkcd.com/comics/sheeple.png)](http://xkcd.com/610/)[/caption]
+oder 
+[caption id="" align="alignnone" width="600" caption="Angular Momentum"][![Angular Momentum](http://imgs.xkcd.com/comics/angular_momentum.jpg)](http://xkcd.com/162/)[/caption]
+[Einer der Comics](http://xkcd.com/599/) hat mich über Paul Erdös recherchieren lassen. Ich habs trotzdem nicht verstanden, aber naja, was ich eigentlich sagen wollte - schaut euch die Seite an, die hat irgendwie so ... alles. 
+Und ja, mir ist bekannt dass die wahrscheinlich schon jeden bekannt ist ausser mir, aber ich finde sie sollte erwähnt werden. 
+
+Einer noch zum Abschluss:
+[caption id="" align="alignnone" width="740" caption="Porn"][![Porn](http://imgs.xkcd.com/comics/porn.png)](http://xkcd.com/598/)[/caption]

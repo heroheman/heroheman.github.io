@@ -1,0 +1,61 @@
+---
+author: Florenz
+comments: true
+date: 2013-12-12 18:48:48+00:00
+layout: post
+slug: scut
+title: SCUT - Sass CSS Utilities
+wordpress_id: 2664
+categories:
+- Blog
+- Frontend
+- Tools
+tags:
+- CSS
+- Library
+- Mixins
+- Sass
+---
+
+Dass ich SASS inzwischen als Standard erachte, dürfte bekannt sein. Zu sehr habe ich inzwischen die Vorteile von Präprozessoren zu schätzen gelernt - Variablen, Mixins, Funktionen, etc.. Dazu gibt es noch einige Frontend-Frameworks wie [Foundation](http://foundation.zurb.com) und Bibliotheken wie [Compass](http://http://compass-style.org) und [Bourbon](http://bourbon.io). Ein weiteres Tool kommt jetzt mit [Scut](http://davidtheclark.github.io/scut/) daher.
+
+
+
+
+
+Scut steht für **S**ass-**C**SS-**Ut**ilities. Hierbei handelt es sich nicht um ein Frontend-Framework mit vordefinierten Styles, sondern um nützliche Sass Mixins und / oder Platzhaltern. Die Implementation orientiert sich an aktuellen Best-Practices wie z.B. [REM Werte](http://snook.ca/archives/html_and_css/font-size-with-rem).
+
+
+
+
+
+Der Sinn und Zweck einer solchen Bibliothek ist meiner Meinung nach einfach Ansichtssache. Viele momentan eingebundene Funktion sind schnell selbst in SASS erstellt, manche recht trivial, manche auch nicht notwendig. Interessant wird es wenn man diese als in ihrer Funktion als Sass Platzhalter nutzt d.h. diese im CSS an einer Stelle gebündelt werden. und so einen schmaleren Output ergeben. Auch Faulheit wird hier belohnt - wie auch bei Compass ist die Kurzschreibweise von Mixins und Plathaltern angenehmer und kürzer als der normale Weg wie bspw. eine Darstellung als [Dreieck](http://davidtheclark.github.io/scut/#triangle).
+
+
+
+
+
+Einfach selbst anschauen, nutzen und ggf. forken und erweitern - das wird vom Ersteller David Clark ausdrücklich erwünscht.
+
+
+
+
+
+#### Links
+
+
+
+
+
+
+
+  * [Scut Dokumentation](http://davidtheclark.github.io/scut/)
+
+
+  * [Introducing Scut](http://css-tricks.com/introducing-scut-new-sass-utility-library/)
+
+
+  * [Spielwiese](http://codepen.io/davidtheclark/pen/yCadJ) auf Codepen
+
+
+

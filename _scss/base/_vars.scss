@@ -1,0 +1,122 @@
+// descriptive variables, add as needed:
+
+// greyscale
+$black          : rgb(0,0,0);
+$darkgrey       : lighten($black, 25%);
+$grey           : lighten($black, 50%);
+$lightgrey      : #bec0c2;
+$lightergrey    : lighten($black, 90%);
+$white          : rgb(255,255,255);
+
+// primarycolors:
+$prim1:  #505050;    // dark grey (text)
+$prim2:  #2b5993;    // dark blue
+$prim3:  #4b72a5;    // blue
+$prim4:  #f5faff;    // light blue
+$prim5:  #e0005b;    // lightpink
+$prim6:  #c50068;    // darkpink
+$prim7:  #bec0c2;    // lightgrey
+$prim8:  #73797c;    // darkgrey
+
+$success-color: green;
+$alert-color:   red;
+
+
+// Layout Defaults
+$text-color:    $prim1;
+$head-color:    black;
+$link-color:    black;
+$bg-color:      $white;
+$border-color:  $prim2;
+$code-bg-color: $grey;
+
+$btn-text:      $white;
+$btn-primary:   $prim2;
+$btn-second:    lighten($btn-primary, 10%);
+$btn-success:   $success-color;
+$btn-alert:     $alert-color;
+
+$highlight-bg:  $prim3;
+
+$nav-text: $lightgrey;
+$nav-text-active: black;
+
+$xs     : 37em; // 480
+$xs-min : $xs+0.01;
+$sm     : 50em; //768
+$sm-min : $sm+0.01;
+$md     : 64em; //992
+$md-min : $md+0.01;
+$lg     : 72em; //1200
+$lg-min : $lg+0.01;
+
+// Flags
+$is-rem: true;
+
+
+// Module & Object Defaults
+// Nav Module
+// Pagination
+$pag-color:     $prim4;
+$pag-bg:        $prim1;
+$pag-bg-active: $prim3;
+
+
+// Typography
+$font-size:         50%;
+$font-size-body:    1;
+$line-height:       $font-size-body*1.5;
+$font-main:         "Noto Serif", Helvetica, Arial, sans-serif;
+$font-heading:      "Playfair Display", serif;
+$font-heading-weight: 700;
+$font-button:       inherit;
+$font-mono:         monospace, sans-serif;
+$font-size-h1:      4;
+$font-size-h2:      3.5;
+$font-size-h3:      2.5;
+$font-size-h4:      2.3;
+$font-size-h5:      2;
+$font-size-h6:      2;
+$font-size-small:   0.9;
+
+// Links
+// $link-color          : rgb(1,53,104);
+$link-color-hover    : darken($link-color, 10);
+$link-color-visited  : darken($link-color-hover, 10);
+$link-color-focus    : darken($link-color-visited, 10);
+$link-weight         : 800;
+
+
+// better link styling
+// see: http://codepen.io/ghepting/pen/tLnHK
+$background-color: #fff !default;
+$link-color: #333 !default;
+$link-color-active: $link-color !default;
+$link-underline-color: $link-color !default;
+$link-underline-color-active: $link-color-active !default;
+$link-underline-width: 1px !default;
+$link-underline-offset: 2px !default;
+$breaking-underlines: true !default;
+
+
+
+// Defaults
+$border-radius: 5;
+$base-margin:   20;
+$space:     1em;
+$space-double:  $space*2;
+$space-triple:  $space*3;
+$space-quad:    $space*2;
+$space-half:    $space/2;
+
+// Marked Text
+$mark-bg            : $prim2;
+$mark-color         : white;
+
+// Support IE?
+// used in some compass mixins
+// eg: to avoid those terrible progid filter
+$support-ie6:   false;
+$support-ie7:   false;
+$support-ie8:   false;
+

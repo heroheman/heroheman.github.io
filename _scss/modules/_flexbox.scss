@@ -1,0 +1,37 @@
+/* All Flex Layout Stuff is here */
+
+.wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    > .header,
+    > main,
+    > nav,
+    > .footer{
+        flex: 3;
+    }
+    > .header{
+        order: 1;
+    }
+    > .meta{
+        order: 2;
+    }
+    > main {
+        order: 3;
+    }
+    > .footer {
+        order: 4;
+    }
+}
+
+// Meta NAvigation overlay
+.meta__wrapper{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+.meta__nav{
+    flex: 1;    
+}
+.meta__description{
+    flex: 2;
+}

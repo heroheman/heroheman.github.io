@@ -1,0 +1,42 @@
+// Basic Link Styling
+
+a{
+    // text-decoration: none;
+    // color: $link-color;
+    // font-weight: $link-weight;
+    // &:hover,
+    // &:active,
+    // &:focus{
+    //     text-decoration:underline;
+    // }
+    // &:active,
+    // &:focus{
+    //     outline:none;
+    // }
+}
+a{
+    color: $link-color;
+    &:hover, &:focus{
+      color: $link-color-active;
+    }
+
+}
+article p > a{
+  text-decoration: none;
+  position: relative;
+  @if $breaking-underlines{
+    text-shadow: -1px -1px 0 $background-color, 
+        1px -1px 0 $background-color, 
+        -1px 1px 0 $background-color, 
+        1px 1px 0 $background-color;
+  }
+  @include underline($link-color);
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){
+  @include underline($link-color, 0.5);}
+  &:hover, &:focus{
+      @include underline($link-color-active);
+      @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi){
+      @include underline($link-color-active, 0.5);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+---
+author: Florenz
+comments: true
+date: 2012-11-14 15:10:07+00:00
+layout: post
+slug: typecast
+title: TypeCast
+wordpress_id: 2165
+categories:
+- Links
+tags:
+- Links
+- Typographie
+---
+
+Typecast ermöglicht komplexe Typografie Aufgaben wie das Setzen und Vergleichen von Schriften. Viele Einstellungsmöglichkeiten sind vorhanden und bietet gegenüber einem Programm wie Photoshop den Vorteil schnell Typografie dort zu setzen, wo sie später auch zu sehen ist - im Browser.
+
+
+
+
+
+[Typecast](http://typecast.com/).
+
+
+

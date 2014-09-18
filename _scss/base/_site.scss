@@ -1,0 +1,53 @@
+// Site Wide Styles, eg home, body
+
+* { @include border-box; }
+
+html{
+    font-family: $font-main;
+    font-size: $font-size;
+    // force a vertical scrollbar to prevent a jumpy page
+    overflow-y: scroll;
+    overflow-x: hidden;
+    @media screen and (min-width: $xs){ font-size: 57.5%; }
+    @media screen and (min-width: $sm){ font-size: 60%; }
+    @media screen and (min-width: $md){ font-size: 65%; }
+    @media screen and (min-width: $lg){ font-size: 67.5%; }
+}
+body{
+    background: $bg-color;
+    @include font-size($font-size-body);
+    line-height: $line-height +em;
+    &:after {
+        content: 'xsmall';
+        display: none;
+    }
+
+    @media screen and (min-width: $xs-min){
+        &:after {
+            content: 'small';
+            display: none;
+        }
+    }
+    @media screen and (min-width: $sm-min){
+        &:after {
+            content: 'medium';
+            display: none;
+        }
+    }
+    @media screen and (min-width: $md-min){
+        &:after {
+            content: 'large';
+            display: none;
+        }
+    }
+    @media screen and (min-width: $lg-min){
+        &:after {
+            content: 'xlarge';
+            display: none;
+        }
+    }
+}
+
+.wrapper, .container{
+    position: relative;
+}

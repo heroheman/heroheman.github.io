@@ -1,0 +1,41 @@
+.footer{
+    position: relative;
+    background: url(../images/map-hb.png);
+    h4{
+        @include font-size(1.8);
+        color: white;
+        margin: 0;
+    }
+    h5{
+        @include font-size(1.4);
+        color: #aaa;
+        margin: 0 0 $space-half;
+    }
+}
+
+.footer__fore{
+    position: relative;
+}
+.footer__back{
+   position: absolute;
+   bottom: 0;
+}
+
+.footer .places{
+    // padding-bottom: 1em;
+    padding: 1em;
+}
+.footer__bottom{
+    width: 100%;
+    background: #212121;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    > li{
+        display: inline-block;
+        padding: $space $space-half;
+        > a{
+            color: white;
+        }
+    }
+}

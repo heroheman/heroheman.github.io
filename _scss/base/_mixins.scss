@@ -1,0 +1,118 @@
+// Mixins
+// Should be visible in output css
+
+// BEM Mixin
+// see: http://mikefowler.me/2013/10/17/support-for-bem-modules-sass-3.3/
+@mixin module($name) {
+    .#{$name} {
+        @at-root {
+            @content;
+        }
+    }
+}
+
+
+// Vendorize CSS Properties - eg.: vendorize(border-box, 10px);
+@mixin vendorize($property, $value) {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    -o-#{$property}: $value;
+    #{$property}: $value;
+}
+
+// Border-Box, use content-box as default
+@mixin border-box($box-type: border-box) {
+    @include vendorize(box-sizing, $box-type)
+}
+
+// Hover Active Focus Link
+@mixin hoverActiveFocus($property, $value) {
+    &:hover, &:active, &:focus {
+        #{$property}: $value;
+    }
+}
+
+// REM FONT SIZE
+@mixin font-size($sizeValue: 1.6){
+    @if $is-rem {
+        font-size: ($sizeValue * 10) + px;
+        font-size: $sizeValue + rem;
+    } @else {
+        font-size: $sizeValue + em;
+    }
+}
+
+@mixin underline($color: $link-underline-color, $weight: $link-underline-width, $offset: $link-underline-offset){
+    background-image: -webkit-linear-gradient(bottom, transparent, transparent $offset, $color $offset, $color ($offset + $weight), transparent ($offset + $weight));
+    -moz-background-image: -moz-linear-gradient(bottom, transparent, transparent $offset, $color $offset, $color ($offset + $weight), transparent ($offset + $weight));
+    background-image: linear-gradient(to top, transparent, transparent $offset, $color $offset, $color ($offset + $weight), transparent ($offset + $weight));
+
+}
+
+
+// Basic Transition Mixin
+// Found: http://css-tricks.com/forums/discussion/17614/lets-learn-sass-together-/p1
+// Example Usage:  @include transition(padding, 1s, ease-in-out);
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+
+// Custom Transition Mixins
+@mixin default-animation($elem: all) {
+    transition: $elem 0.2s ease-in-out;
+}
+
+// Keyframe default-animation
+// https://gist.github.com/ericam/1607696
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+
+
+@mixin linear-gradient($fromColor, $toColor) {
+    background-color: $toColor; /* Fallback Color */
+    background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+    background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+    background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+    background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+    background-image:         linear-gradient(top, $fromColor, $toColor);
+    // see variables for ie support, i don't recommend using the filter property
+    @if $support-ie6 or $support-ie7 or $support-ie8{
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+    }
+}
+
+// Responsive utilities
+// -------------------------
+// More easily include all the states for responsive-utilities.less.
+// [converter] $parent hack
+@mixin responsive-visibility($parent) {
+  #{$parent} { display: block !important; }
+  tr#{$parent} { display: table-row !important; }
+  th#{$parent},
+  td#{$parent} { display: table-cell !important; }
+}
+
+// [converter] $parent hack
+@mixin responsive-invisibility($parent) {
+    #{$parent},
+  tr#{$parent},
+  th#{$parent},
+  td#{$parent} { display: none !important; }
+}

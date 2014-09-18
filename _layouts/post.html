@@ -1,17 +1,27 @@
 ---
 layout: default
 ---
+<header class="post__header">
+    {% if page.headimage  %}
+    <figure class="post__headimage">
+        <img src="/images/{{page.headimage}}" alt="{{page.title}}">
+    </figure>
+    <h2 class="post__headline--bright">
+        {{ page.title }}      
+    </h2>
+    {% else  %}
+    <h2> 
+        {{ page.title }}      
+    </h2>
+    {% endif  %}
+</header>
+<main>
+    <article role="article" class="post">
+        {{ content }}
+        <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+        <p class="time">
+             <time datetime="2014-05-5">{{ post.date | date: "%b %-d, %Y" }}<time>
+        </p>
+    </article>
+</main>
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
-    {{ content }}
-  </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
-
-  {% include disqus.html disqus_identifier=page.disqus_identifier %}
-</article>

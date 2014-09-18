@@ -1,0 +1,75 @@
+---
+author: Florenz
+comments: true
+date: 2011-01-13 18:12:15+00:00
+layout: post
+slug: bye-bye-h-264
+title: Bye, Bye, H.264
+wordpress_id: 1645
+categories:
+- Blog
+tags:
+- Apple
+- browser
+- google
+- H.264
+- HTML5
+- Microsoft
+- VP8
+- WebM
+---
+
+![]({{ site.baseurl }}/images/2011/01/Bildschirmfoto-2011-01-13-um-19.09.13-580x98.png)
+
+
+
+
+
+Google hat angekündigt, H.264 in Zukunft nicht mehr zu supporten. Auf  [Ars Technica schreibt Peter Bright](http://arstechnica.com/web/news/2011/01/googles-dropping-h264-from-chrome-a-step-backward-for-openness.ars/), dass dieses einen Rückschritt für die Offenheit des Webs darstellt. Ich behaupte, es ist eher das Gegenteil der Fall.
+
+
+
+
+
+Spulen wir ein bisschen zurück. In der neuen HTML5 Spezifikation ist die Frage eines einheitlichen Videocodecs immer noch offen. Apple und Microsoft wollen H.264 durchsetzen, da dieser frei ist und offene Codecs wie Ogg Theora, der Favorit von Mozilla, patentbehaftet sind, eine Gemeinschaft von Patenthaltern sogar eine Klage anstrebt. Dies ist die [MPEG LA](http://www.mpegla.com), der Patentpool hinter H.264 indem sich, oh Wunder, auch [Microsoft und Apple](http://www.mpegla.com/main/programs/M4V/Pages/Licensors.aspx) befinden. Würde nun Firefox oder ein anderer Open Source Browser auch auf H.264 setzen, ist es gut möglich, dass diese in Zukunft für die Benutzung belangt werden können. Sowie jede Webseite, die kommerziell H.264 Videos anbietet. Dieses ist sicherlich nicht im Sinne einer freien Software. Die Hoffnung lag nun auf Google, welche den VP8 Codec durch Übernahme der Firma On2 erhalten haben und nun frei zur Verfügung (unter [BSD Lizenz](http://de.wikipedia.org/wiki/BSD-Lizenz)) stellt. Zusammen mit dem Audiocodec Vorbis ist dieses nun unter dem Namen WebM im Umlauf.
+Inzwischen ist ein Großteil der Videos z.B. auf YouTube auch als WebM aufbereitet worden. WebM gibt eine bessere Bildqualität und eine kleinere Dateigröße gegenüber Ogg Vorbis an und soll gleichwertig mit dem H.264 Baseline Codec sein, welche im Web verwendet wird.
+
+
+
+
+
+In der Unterstützung sieht es zurzeit folgendermaßen aus:
+**Firefox:** Ogg Vorbis, WebM (ab FF4)
+**Opera:** Ogg Vorbis, WebM
+**IE9**: H.264, WebM (muss nachinstalliert werden)
+**Chrome/Chromium:** Ogg Vorbis, WebM
+**Safari:** H.264
+
+
+
+
+
+WebM ist also nun auf dem Vormarsch. Zwar in einigen Browsern noch nicht offiziell unterstützt, aber der Übergang zu neuen Versionen läuft abgesehen vom IE eigentlich immer sehr schnell. Der Codec kann in einem Jahr bereits ein etablierter Standard sein. Auch wenn Apple sich scheinbar dagegen sträubt: WebM kommt, und die Entscheidung H.264 aus den Chrome / Chromium Browsern zu entfernen, dürfte diese Sache beschleunigen. In einem Jahr dürfte WebM auf dem Großteil der Rechner installiert sein. Dieser Schritt ist besser als mehrere Jahre mit zwei verschiedenen Codecs durch die Welt zu laufen.
+
+
+
+
+
+Basic Thinking wirft als Argument noch ein, dass Webentwickler jetzt noch eine noch einen Codec unterstützen müssen und Endkonsumenten jetzt nicht mehr alles betrachten können. Dass glaube ich nicht. Wer HTML5 Video jetzt schon anbietet, muss sowieso Fallbacklösungen anbieten. Und die einzigen Konsumenten die eingeschränkt werden, sind iPhone / iPad Nutzer, da Apple sich mit dem Ausschluss von WebM und Flash hier selbst ein Bein stellt Und seine Nutzer einschränkt, aber dass sind sie ja schon gewohnt. Bleibt nur die Hoffnung, dass Apple sich dem Druck beugt und wirklich versucht, ein offenes Web durchzusetzen, anstatt nur davon zu reden<del> und ihren eigenen Willen durchzukriegen</del>. Ausserdem wird Safari sonst der einzige Browser sein, welcher dann nicht WebM unterstützt - und ist dann somit auf dem Rechner ziemlich unbrauchbar. Microsoft hat es bereits getan, und bietet WebM zumindest als nachinstallierbares Plugin an. Immerhin.
+
+
+
+
+
+Sicherlich wird es Menschen geben, wie Peter Bright, die hiervon nicht so begeistert sind. Diesen wird die Lektüre eines Beitrages im [Opera Blog empfohlen](http://my.opera.com/haavard/blog/2011/01/13/openness), wo sämtlichen "Argumente" auseinandergepflückt und zerstreut werden.
+
+
+
+
+
+Links:
+[Ankündigung im Chrome Blog](http://blog.chromium.org/2011/01/html-video-codec-support-in-chrome.html)
+[Ars Technica - A step backward for openess](http://arstechnica.com/web/news/2011/01/googles-dropping-h264-from-chrome-a-step-backward-for-openness.ars/)
+
+
+
