@@ -1,0 +1,18 @@
+# flore.nz — Redirect-Regeln (Apache / LiteSpeed)
+#
+# Root (/) zeigt die Profilseite. Alles andere wird dauerhaft (301) und
+# path-erhaltend auf blog.flore.nz weitergeleitet. Query-String bleibt erhalten.
+#
+# Liegt im Web-Root direkt neben index.html.
+
+RewriteEngine On
+
+# 1. Bestehende Dateien und Ordner am Root weiter ausliefern
+#    (index.html, die Profil-Bilder, usw.) — sonst bräche die Profilseite.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 2. Alles Übrige: 301 auf blog.flore.nz, gleicher Pfad, Query angehängt.
+#    ^(.+)$ greift nur bei nicht-leerem Pfad, der Root (^$) bleibt also außen vor.
+RewriteRule ^(.+)$ https://blog.flore.nz/$1 [R=301,L,QSA]
