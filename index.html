@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Florenz Heldermann — Senior Consultant, UI/UX &amp; Frontend</title>
-  <meta name="description" content="Florenz Heldermann. Senior Consultant für UI, UX und Frontend." />
+  <title>Florenz Heldermann · Senior Frontend Consultant</title>
+  <meta name="description" content="Senior Frontend Consultant mit über 15 Jahren an der Schnittstelle von UX, UI, Engineering und Business. Schwerpunkt: skalierbare Vue/Nuxt-Architekturen und durchdachte UI-Systeme." />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Florenz Heldermann" />
-  <meta property="og:description" content="Senior Consultant · UI/UX &amp; Frontend" />
+  <meta property="og:title" content="Florenz Heldermann · Senior Frontend Consultant" />
+  <meta property="og:description" content="15+ Jahre an der Schnittstelle von UX, UI, Engineering und Business. Skalierbare Vue/Nuxt-Architekturen, durchdachte UI-Systeme, vom Konzept bis zum Rollout." />
   <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://flore.nz" />
 
@@ -118,6 +118,16 @@
     }
 
     ::selection { background: var(--accent); color: var(--paper); }
+
+    /* language toggle */
+    .lang-btn {
+      color: var(--faint);
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    .lang-btn:hover { color: var(--muted); }
+    .lang-btn.is-active { color: var(--ink); }
+    .lang-btn:focus-visible { outline: none; color: var(--accent); }
   </style>
 </head>
 
@@ -127,11 +137,15 @@
     <!-- top hairline row -->
     <header class="reveal d1 flex items-baseline justify-between border-t border-hairline pt-4 text-[0.7rem] uppercase tracking-[0.22em] text-muted">
       <span>flore.nz</span>
-      <span aria-hidden="true">N&nbsp;53°&thinsp;&middot;&thinsp;E&nbsp;10°</span>
+      <div class="flex items-baseline gap-2" role="group" aria-label="Sprache / Language">
+        <button type="button" data-lang="de" class="lang-btn tracking-[0.22em]">DE</button>
+        <span class="text-hairline" aria-hidden="true">/</span>
+        <button type="button" data-lang="en" class="lang-btn tracking-[0.22em]">EN</button>
+      </div>
     </header>
 
     <!-- hero -->
-    <section class="flex flex-1 flex-col justify-center py-4 sm:py-7">
+    <section class="flex flex-1 flex-col justify-center py-8 sm:py-10">
 
       <!-- name spans the full measure -->
       <h1 class="display text-ink text-[clamp(3rem,12vw,9.25rem)]">
@@ -139,66 +153,116 @@
         <span class="reveal-line d3 block">Heldermann<span class="text-accent">.</span></span>
       </h1>
 
-      <!-- meta + bio + channels on the left, portrait inset on the right -->
+      <!-- role + bio on the left, portrait inset on the right -->
       <div class="mt-7 grid grid-cols-1 items-start gap-x-10 gap-y-10 sm:mt-9 lg:grid-cols-12">
-        <div class="lg:col-span-7">
+        <div class="lg:col-span-8">
           <p class="reveal d4 text-[0.74rem] uppercase tracking-[0.26em] text-muted">
-            Senior Consultant &nbsp;·&nbsp; UI / UX &amp; Frontend
+            Senior Frontend Consultant &nbsp;·&nbsp; UX / UI / Engineering
           </p>
 
-          <!-- BIO: Platzhalter — diesen einen Satz durch deinen eigenen ersetzen. -->
-          <p class="reveal d5 mt-5 max-w-md font-display text-xl italic leading-relaxed text-faint">
-            Platzhalter: dein Satz steht hier. Eine Zeile, die sagt, wofür du Interfaces baust.
-          </p>
-
-          <!-- channels -->
-          <nav aria-label="Profile und Kanäle" class="reveal d6 mt-8 max-w-md border-t border-hairline">
-            <ul>
-              <li>
-                <a href="https://norden.social/@florenz" target="_blank" rel="me noopener"
-                   class="link-row flex items-baseline gap-4 border-b border-hairline py-3.5 text-sm text-ink">
-                  <span class="text-faint">01</span>
-                  <span class="label">Mastodon</span>
-                  <span class="ml-auto text-xs text-faint normal-case tracking-normal">@florenz</span>
-                  <span class="arrow inline-block text-muted" aria-hidden="true">↗</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://bsky.app/profile/flore.nz" target="_blank" rel="me noopener"
-                   class="link-row flex items-baseline gap-4 border-b border-hairline py-3.5 text-sm text-ink">
-                  <span class="text-faint">02</span>
-                  <span class="label">Bluesky</span>
-                  <span class="ml-auto text-xs text-faint normal-case tracking-normal">flore.nz</span>
-                  <span class="arrow inline-block text-muted" aria-hidden="true">↗</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/heroheman" target="_blank" rel="me noopener"
-                   class="link-row flex items-baseline gap-4 py-3.5 text-sm text-ink">
-                  <span class="text-faint">03</span>
-                  <span class="label">GitHub</span>
-                  <span class="ml-auto text-xs text-faint normal-case tracking-normal">heroheman</span>
-                  <span class="arrow inline-block text-muted" aria-hidden="true">↗</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          <!-- bio: DE/EN, umgeschaltet über den Sprach-Toggle oben rechts -->
+          <div class="reveal d5 mt-5 max-w-2xl font-display text-lg leading-relaxed text-ink sm:text-xl">
+            <p data-lang="de">
+              Über 15 Jahre an der Schnittstelle von UX, UI, Engineering und Business.
+              Schwerpunkt: skalierbare Vue/Nuxt-Architekturen, durchdachte UI-Systeme und
+              Greenfield-Prototyping für E-Commerce- und Content-Produkte. Von UX-Konzept
+              und Interaktions-Prototyp bis zum produktiven Rollout, als Tech Lead, UI Engineer
+              oder hands-on Entwickler, je nach Projekt.
+            </p>
+            <p data-lang="en" hidden>
+              More than 15 years at the intersection of UX, UI, engineering and business.
+              Focus: scalable Vue/Nuxt architectures, well considered UI systems and
+              greenfield prototyping for e-commerce and content driven products. From UX
+              concept and interaction prototype through to production rollout, as tech lead,
+              UI engineer or hands-on developer, depending on the project.
+            </p>
+          </div>
         </div>
 
         <!-- portrait -->
-        <figure class="reveal-portrait lg:col-span-5 lg:justify-self-end">
+        <figure class="reveal-portrait lg:col-span-4 lg:justify-self-end">
           <!-- Platzhalterbild — gegen das spätere Profifoto austauschen (gleiche Farbwelt). -->
           <img
             src="me-finger-lego.jpeg"
             alt="Florenz Heldermann"
             width="788" height="1024"
-            class="portrait aspect-[3/4] w-36 object-cover object-top sm:w-48 lg:w-full lg:max-w-[12.5rem]"
+            class="portrait aspect-[3/4] w-36 object-cover object-top sm:w-48 lg:w-full lg:max-w-[13rem]"
           />
           <figcaption class="mt-3 text-[0.65rem] uppercase tracking-[0.22em] text-faint">
-            Platzhalter &middot; Foto folgt
+            <span data-lang="de">Platzhalter &middot; Foto folgt</span>
+            <span data-lang="en" hidden>Placeholder &middot; photo soon</span>
           </figcaption>
         </figure>
       </div>
+
+      <!-- channels: full-width index -->
+      <nav aria-label="Profile und Kanäle" class="reveal d6 mt-12 border-t border-hairline sm:mt-14">
+        <ul class="grid grid-cols-1 sm:grid-flow-col sm:grid-rows-4 sm:gap-x-14 lg:gap-x-20">
+          <li>
+            <a href="https://blog.florenz.dev" target="_blank" rel="me noopener"
+               class="link-row flex items-baseline gap-4 border-b border-hairline py-3.5 text-sm text-ink">
+              <span class="text-faint">01</span>
+              <span class="label">Blog</span>
+              <span class="ml-auto pl-4 text-xs text-faint normal-case tracking-normal">blog.florenz.dev</span>
+              <span class="arrow inline-block text-muted" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://opentabs.florenz.dev" target="_blank" rel="me noopener"
+               class="link-row flex items-baseline gap-4 border-b border-hairline py-3.5 text-sm text-ink">
+              <span class="text-faint">02</span>
+              <span class="label">OpenTabs</span>
+              <span class="ml-auto pl-4 text-xs text-faint normal-case tracking-normal">opentabs.florenz.dev</span>
+              <span class="arrow inline-block text-muted" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/heroheman" target="_blank" rel="me noopener"
+               class="link-row flex items-baseline gap-4 border-b border-hairline py-3.5 text-sm text-ink">
+              <span class="text-faint">03</span>
+              <span class="label">GitHub</span>
+              <span class="ml-auto pl-4 text-xs text-faint normal-case tracking-normal">heroheman</span>
+              <span class="arrow inline-block text-muted" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/florenzheldermann/" target="_blank" rel="noopener"
+               class="link-row flex items-baseline gap-4 border-b border-hairline py-3.5 text-sm text-ink sm:border-b-0">
+              <span class="text-faint">04</span>
+              <span class="label">LinkedIn</span>
+              <span class="ml-auto pl-4 text-xs text-faint normal-case tracking-normal">florenzheldermann</span>
+              <span class="arrow inline-block text-muted" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.xing.com/profile/Florenz_Heldermann" target="_blank" rel="noopener"
+               class="link-row flex items-baseline gap-4 border-b border-hairline py-3.5 text-sm text-ink">
+              <span class="text-faint">05</span>
+              <span class="label">Xing</span>
+              <span class="ml-auto pl-4 text-xs text-faint normal-case tracking-normal">Florenz&#95;Heldermann</span>
+              <span class="arrow inline-block text-muted" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://norden.social/@florenz" target="_blank" rel="me noopener"
+               class="link-row flex items-baseline gap-4 border-b border-hairline py-3.5 text-sm text-ink">
+              <span class="text-faint">06</span>
+              <span class="label">Mastodon</span>
+              <span class="ml-auto pl-4 text-xs text-faint normal-case tracking-normal">@florenz</span>
+              <span class="arrow inline-block text-muted" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://bsky.app/profile/flore.nz" target="_blank" rel="me noopener"
+               class="link-row flex items-baseline gap-4 py-3.5 text-sm text-ink">
+              <span class="text-faint">07</span>
+              <span class="label">Bluesky</span>
+              <span class="ml-auto pl-4 text-xs text-faint normal-case tracking-normal">flore.nz</span>
+              <span class="arrow inline-block text-muted" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </section>
 
     <!-- footer -->
@@ -211,5 +275,28 @@
     </footer>
 
   </main>
+
+  <script>
+    (function () {
+      var buttons = Array.prototype.slice.call(document.querySelectorAll(".lang-btn"));
+      function setLang(lang) {
+        document.documentElement.lang = lang;
+        document.querySelectorAll("[data-lang]").forEach(function (el) {
+          if (el.classList.contains("lang-btn")) return;
+          el.hidden = el.getAttribute("data-lang") !== lang;
+        });
+        buttons.forEach(function (b) {
+          var on = b.getAttribute("data-lang") === lang;
+          b.classList.toggle("is-active", on);
+          b.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+      }
+      buttons.forEach(function (b) {
+        b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
+      });
+      var prefersEn = (navigator.language || "de").toLowerCase().indexOf("en") === 0;
+      setLang(prefersEn ? "en" : "de");
+    })();
+  </script>
 </body>
 </html>
