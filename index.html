@@ -130,6 +130,26 @@
     .link-row:hover .brand,
     .link-row:focus-visible .brand { color: var(--ink); transform: translateY(-0.14em); }
 
+    /* contact CTA: accent label with an underline that draws in and an arrow that slides */
+    .email-cta { width: fit-content; }
+    .email-cta:focus-visible { outline: none; }
+    .email-cta .cta-label { position: relative; }
+    .email-cta .cta-label::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: 0.02em;
+      height: 2px; width: 100%;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .email-cta:hover .cta-label::after,
+    .email-cta:focus-visible .cta-label::after { transform: scaleX(1); }
+    .email-cta .cta-arrow { display: inline-block; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+    .email-cta:hover .cta-arrow,
+    .email-cta:focus-visible .cta-arrow { transform: translateX(0.28em); }
+
     /* portrait frame */
     .portrait {
       filter: saturate(0.96) contrast(1.02);
@@ -196,6 +216,13 @@
             concept and interaction prototype through to production rollout, as tech lead,
             UI engineer or hands-on developer, depending on the project.
           </p>
+
+          <!-- contact CTA: href is assembled by JS (see footer note), label stays "Write me" -->
+          <a class="email-cta reveal d5 mt-8 inline-flex items-center gap-2.5 font-display text-2xl text-accent sm:text-3xl"
+             data-u="niom" data-d="zn.erolf" title="Write me an email">
+            <span class="cta-label">Write me</span>
+            <span class="cta-arrow" aria-hidden="true">&rarr;</span>
+          </a>
         </div>
 
         <!-- portrait -->
@@ -301,14 +328,15 @@
   </main>
 
   <script>
-    // Reveal the contact email only at runtime, kept out of the static markup.
+    // Assemble the contact email only at runtime, kept out of the static markup.
+    // .email-link shows the address itself; .email-cta keeps its label and just gets the href.
     (function () {
-      var el = document.querySelector(".email-link");
-      if (!el) return;
       var rev = function (s) { return s.split("").reverse().join(""); };
-      var addr = rev(el.getAttribute("data-u")) + "@" + rev(el.getAttribute("data-d"));
-      el.textContent = addr;
-      el.setAttribute("href", "mailto:" + addr);
+      document.querySelectorAll("[data-u][data-d]").forEach(function (el) {
+        var addr = rev(el.getAttribute("data-u")) + "@" + rev(el.getAttribute("data-d"));
+        el.setAttribute("href", "mailto:" + addr);
+        if (el.classList.contains("email-link")) el.textContent = addr;
+      });
     })();
   </script>
 </body>
