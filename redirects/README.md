@@ -9,8 +9,8 @@ Beispiele:
 |---|---|
 | `flore.nz/` | 200 — Profilseite (`index.html`) |
 | `flore.nz/me-finger-lego.jpeg` | 200 — Profil-Asset |
-| `flore.nz/blog/pines-blake-crouch` | 301 → `blog.flore.nz/blog/pines-blake-crouch` |
-| `flore.nz/blog/en/foo` | 301 → `blog.flore.nz/blog/en/foo` |
+| `flore.nz/blog/pines-blake-crouch` | 301 → `blog.flore.nz/pines-blake-crouch` |
+| `flore.nz/blog/en/foo` | 301 → `blog.flore.nz/en/foo` |
 | `flore.nz/irgendwas?x=1` | 301 → `blog.flore.nz/irgendwas?x=1` |
 
 ## Apache / LiteSpeed (Standard bei Shared-Webspace)
@@ -22,8 +22,20 @@ sofern `mod_rewrite` und `AllowOverride` aktiv sind (bei Shared-Hosting i.d.R. d
 
 ```nginx
 server {
+    server_name www.flore.nz;
+    return 301 https://flore.nz$request_uri;
+}
+
+server {
     server_name flore.nz;
     root /pfad/zum/webroot;
+
+    location = /blog {
+        return 301 https://blog.flore.nz/;
+    }
+    location ^~ /blog/ {
+        rewrite ^/blog/(.*)$ https://blog.flore.nz/$1 permanent;
+    }
 
     # Root und vorhandene Profil-Assets normal ausliefern,
     # alles andere dauerhaft auf blog.flore.nz.
