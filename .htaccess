@@ -13,6 +13,10 @@ RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# 2. Alles Übrige: 301 auf blog.flore.nz, gleicher Pfad, Query angehängt.
+# 2. Legacy-/blog-Pfade ohne den Prefix auf den Blog umleiten.
+RewriteRule ^blog/?$ https://blog.flore.nz/ [R=301,L,QSA]
+RewriteRule ^blog/(.+)$ https://blog.flore.nz/$1 [R=301,L,QSA]
+
+# 3. Alles Übrige: 301 auf blog.flore.nz, gleicher Pfad, Query angehängt.
 #    ^(.+)$ greift nur bei nicht-leerem Pfad, der Root (^$) bleibt also außen vor.
 RewriteRule ^(.+)$ https://blog.flore.nz/$1 [R=301,L,QSA]
