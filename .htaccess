@@ -24,3 +24,12 @@ RewriteRule ^blog/(.+)$ https://blog.flore.nz/$1 [R=301,L,QSA]
 # 3. Alles Übrige: 301 auf blog.flore.nz, gleicher Pfad, Query angehängt.
 #    ^(.+)$ greift nur bei nicht-leerem Pfad, der Root (^$) bleibt also außen vor.
 RewriteRule ^(.+)$ https://blog.flore.nz/$1 [R=301,L,QSA]
+
+# 4. Zusätzliches Canonical-Signal. Die Profilseite ist über flore.nz UND
+#    florenz.dev erreichbar. Dieser HTTP-Header verweist beide Auslieferungen
+#    auf flore.nz als Original und ergänzt das <link rel="canonical"> im HTML.
+<IfModule mod_headers.c>
+  <FilesMatch "^index\.html$">
+    Header set Link "<https://flore.nz/>; rel=\"canonical\""
+  </FilesMatch>
+</IfModule>
