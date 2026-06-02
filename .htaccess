@@ -7,6 +7,10 @@
 
 RewriteEngine On
 
+# 0. Canonical Host: www auf non-www umleiten.
+RewriteCond %{HTTP_HOST} ^www\.flore\.nz$ [NC]
+RewriteRule ^ https://flore.nz%{REQUEST_URI} [R=301,L,NE]
+
 # 1. Bestehende Dateien und Ordner am Root weiter ausliefern
 #    (index.html, die Profil-Bilder, usw.) — sonst bräche die Profilseite.
 RewriteCond %{REQUEST_FILENAME} -f [OR]
