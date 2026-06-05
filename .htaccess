@@ -31,5 +31,8 @@ RewriteRule ^(.+)$ https://blog.flore.nz/$1 [R=301,L,QSA]
 <IfModule mod_headers.c>
   <FilesMatch "^index\.html$">
     Header set Link "<https://flore.nz/>; rel=\"canonical\""
+    # 5. LLM-Discovery: HTTP-Link-Header auf die llms.txt, damit Agenten die
+    #    maschinenlesbare Profil-Zusammenfassung ohne Raten finden.
+    Header add Link "<https://flore.nz/llms.txt>; rel=\"llms\""
   </FilesMatch>
 </IfModule>
