@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://flore.nz/sitemap.xml
+
+# LLM-friendly profile summary
+LLM: https://flore.nz/llms.txt
